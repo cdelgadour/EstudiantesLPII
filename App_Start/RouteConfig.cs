@@ -14,6 +14,12 @@ namespace EstudiantesLPII
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Carreras",
+                url: "Carreras",
+                defaults: new { controller = "Carreras", action = "GetCarreras", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
