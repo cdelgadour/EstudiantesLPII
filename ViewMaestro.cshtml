@@ -1,0 +1,51 @@
+@model IEnumerable<Estudiantes.Models.Maestro>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_Maestro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apell_Maestro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Matri_Maestro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mail_Maestro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_Materia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom_Maestro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apell_Maestro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Matri_Maestro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mail_Maestro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_Materia)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_maestro }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_maestro }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_maestro })
+        </td>
+    </tr>
+}
+
+</table>
