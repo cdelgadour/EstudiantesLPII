@@ -1,0 +1,27 @@
+﻿@model EstudiantesLPII.Models.Carreras
+
+@{
+    ViewBag.Title = "GetCarreras";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Carreras</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID Carrera</th>
+            <th scope="col">Codigo</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">ID Departamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">@Model.ID_Carrera</th>
+            <td>@Model.Cod_Carrera</td>
+            <td>@Model.Nom_Carerra</td>
+            <td>@Model.ID_Dept</td>
+        </tr>
+    </tbody>
+</table>
+
